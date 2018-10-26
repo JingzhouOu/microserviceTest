@@ -1,0 +1,19 @@
+server:
+  port: 8000
+spring:
+  jpa:
+    database: MYSQL
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:                           # 指定数据源
+    url: jdbc:mysql://localhost/microservice
+    username: root
+    password: ustb1122
+    driver-class-name: com.mysql.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+

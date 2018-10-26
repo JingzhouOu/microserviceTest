@@ -1,0 +1,64 @@
+package com.jingzhou.microserviceTest.entity;
+
+import javax.persistence.*;
+import java.math.BigDecimal;
+
+/**
+ * @author Jingzhou Ou
+ * Created on 18-10-26
+ */
+@Entity
+@Table(name = "user")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "username")
+    private String userName;
+    @Column
+    private String name;
+    @Column
+    private Integer age;
+    @Column
+    private BigDecimal balance;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+}

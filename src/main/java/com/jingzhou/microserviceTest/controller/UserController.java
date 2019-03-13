@@ -5,7 +5,10 @@ import com.jingzhou.microserviceTest.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Jingzhou Ou
@@ -21,4 +24,11 @@ public class UserController {
         User user = this.userRepository.findById(id).orElse(null);
         return user;
     }
+
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        List<User> allUsers = this.userRepository.findAll();
+        return allUsers;
+    }
+
 }
